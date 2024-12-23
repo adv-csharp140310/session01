@@ -14,12 +14,12 @@
              * <type> <name> = <init_value>
              * 
              * <type>:
+             *   object
              *   value: 
              *      int, bool, ...
              *      stack
              *   refrence type
-             *      `new`
-             *      object
+             *      `new`             *      
              *      Heap
              *      
              *      
@@ -61,8 +61,34 @@
              * */
 
 
+            //Boxing
+            var name = "Ali";
+            object obj = name;
+            
+            //Unboxing
+            var name2 = (string)obj;
+            /*
+             * Runtime-error
+             * Readabily
+             */
 
+            var name3 = Convert.ToString(obj);
+            /*
+             * Readabily
+             * Performance
+             */
 
+            /* function(int/string/bool a){
+             * }
+             * 
+             * function(objet a){
+             * 
+             * }
+             * 
+             * 
+             * Generic <>
+             * */
+            var x = new List<int>();
         }
     }
 }
