@@ -89,6 +89,49 @@
              * Generic <>
              * */
             var x = new List<int>();
+
+
+            var p1 = new Product();
+            p1.Name = "monitr";
+            p1.Price = 100;
+
+            var p2 = new Product("keyboard", 200);
+
+
+            //Object Initializer
+            var p3 = new Product
+            {
+                Name = "Keyboard",
+                Price = 100,
+                Rate = 5,
+            };
+
+            Product p4 = new()
+            {
+                Name = "Keyboard",
+                Price = 100,
+                Rate = 5,
+            };
+
+            var y = new { };
         }
     }
+
+    class Product 
+    {
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public int Rate { get; set; }
+
+        public Product()
+        {
+            
+        }
+        public Product(string Name, int Price)
+        {
+            this.Name = Name;
+            this.Price = Price; 
+        }
+    }
+
 }
