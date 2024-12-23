@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            buttonCalc = new Button();
             SuspendLayout();
+            // 
+            // buttonCalc
+            // 
+            buttonCalc.Location = new Point(12, 12);
+            buttonCalc.Name = "buttonCalc";
+            buttonCalc.Size = new Size(75, 23);
+            buttonCalc.TabIndex = 0;
+            buttonCalc.Text = "Calc";
+            buttonCalc.UseVisualStyleBackColor = true;
+            buttonCalc.Click += buttonCalc_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(576, 286);
+            Controls.Add(buttonCalc);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -42,5 +54,7 @@
         }
 
         #endregion
+
+        private Button buttonCalc;
     }
 }

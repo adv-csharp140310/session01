@@ -1,4 +1,6 @@
-﻿namespace session01
+﻿using session01.UI;
+
+namespace session01
 {
     public partial class Form1 : Form
     {
@@ -64,7 +66,7 @@
             //Boxing
             var name = "Ali";
             object obj = name;
-            
+
             //Unboxing
             var name2 = (string)obj;
             /*
@@ -114,6 +116,12 @@
             };
 
             var y = new { };
+        }
+
+        private void buttonCalc_Click(object sender, EventArgs e)
+        {
+            var frm = new FormCalc();
+            frm.ShowDialog();
         }
     }
 
