@@ -52,27 +52,16 @@ public partial class FormCalc : Form
 
     private double Calc(double a, double b, CalcOp op)
     {
-        double result = 0;
         switch (op)
         {
-            case CalcOp.ADD:
-                result = a + b;
-                break;
-            case CalcOp.SUB:
-                result = a - b;
-                break;
-            case CalcOp.MUL:
-                result = a * b;
-                break;
-            case CalcOp.DIV:
-                result = a / b;
-                break;
+            case CalcOp.ADD: return a + b;
+            case CalcOp.SUB: return a - b;
+            case CalcOp.MUL: return a * b;
+            case CalcOp.DIV: return a / b;
             default:
                 MessageBox.Show("Op is not defined");
                 throw new Exception();
-
         }
-        return result;
     }
 }
 
