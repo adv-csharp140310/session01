@@ -123,6 +123,12 @@ namespace session01
             var frm = new FormCalc();
             frm.ShowDialog();
         }
+
+        private void buttonUsers_Click(object sender, EventArgs e)
+        {
+            var frm = new FormUser();
+            frm.ShowDialog();
+        }
     }
 
 }
