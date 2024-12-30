@@ -14,9 +14,4 @@ Git
 	confilict
 		2 nafar -> 1 file -> line
 
-<<<<<<< HEAD
-	my name is akbar azadi!
-=======
-
-	my name is akbar azadi *****
->>>>>>> 40c401a8a379e0a2bc4d3ae935b408486be9f055
+	my name is akbar azadi *** !
