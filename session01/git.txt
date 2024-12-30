@@ -11,6 +11,7 @@ Git
 	commit
 	clone
 
+	confilict
+		2 nafar -> 1 file -> line
 
-
-	my name is akbar azadi
+	my name is akbar azadi!
