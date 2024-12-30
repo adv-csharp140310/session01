@@ -80,7 +80,6 @@ partial class FormCalc
         buttonAdd.TabIndex = 4;
         buttonAdd.Text = "➕";
         buttonAdd.UseVisualStyleBackColor = true;
-        buttonAdd.Click += buttonAdd_Click;
         // 
         // buttonSub
         // 
@@ -90,7 +89,6 @@ partial class FormCalc
         buttonSub.TabIndex = 5;
         buttonSub.Text = "➖";
         buttonSub.UseVisualStyleBackColor = true;
-        buttonSub.Click += buttonSub_Click;
         // 
         // buttonMul
         // 
@@ -100,7 +98,6 @@ partial class FormCalc
         buttonMul.TabIndex = 6;
         buttonMul.Text = "*";
         buttonMul.UseVisualStyleBackColor = true;
-        buttonMul.Click += buttonMul_Click;
         // 
         // buttonDiv
         // 
@@ -110,7 +107,6 @@ partial class FormCalc
         buttonDiv.TabIndex = 7;
         buttonDiv.Text = "➗";
         buttonDiv.UseVisualStyleBackColor = true;
-        buttonDiv.Click += buttonDiv_Click;
         // 
         // textBoxResult
         // 

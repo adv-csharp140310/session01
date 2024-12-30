@@ -4,27 +4,56 @@ public partial class FormCalc : Form
     public FormCalc()
     {
         InitializeComponent();
+        buttonAdd.Click += buttonCalcHandler;
+        buttonSub.Click += buttonCalcHandler;
+        buttonMul.Click += buttonCalcHandler;
+        buttonDiv.Click += buttonCalcHandler;
+        buttonAdd.Tag = CalcOp.ADD;
+        buttonSub.Tag = CalcOp.SUB;
+        buttonMul.Tag = CalcOp.MUL;
+        buttonDiv.Tag = CalcOp.DIV; 
     }
 
-    private void buttonAdd_Click(object sender, EventArgs e)
+    private void buttonCalcHandler(object? sender, EventArgs e)
     {
-        textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.ADD).ToString();
+        if(sender is Button btn && btn.Tag is CalcOp op)
+        {
+            textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), op).ToString();
+        }
+
+        //if(sender != null)
+        //{
+        //    if(sender is Button)
+        //    {
+        //        var btn = (Button)sender;                
+        //        textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), (CalcOp)btn.Tag).ToString();
+        //    }
+        //}
+        
     }
 
-    private void buttonSub_Click(object sender, EventArgs e)
-    {
-        textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.SUB).ToString();
-    }
+    //private void buttonAdd_Click(object sender, EventArgs e)
+    //{
+    //    textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.ADD).ToString();
+    //}
 
-    private void buttonMul_Click(object sender, EventArgs e)
-    {
-        textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.MUL).ToString();
-    }
+    //private void buttonSub_Click(object sender, EventArgs e)
+    //{
+    //    textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.SUB).ToString();
+    //}
 
-    private void buttonDiv_Click(object sender, EventArgs e)
-    {
-        textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.DIV).ToString();
-    }
+    //private void buttonMul_Click(object sender, EventArgs e)
+    //{
+    //    textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.MUL).ToString();
+    //}
+
+    //private void buttonDiv_Click(object sender, EventArgs e)
+    //{
+    //    textBoxResult.Text = CalcPattern(Convert.ToDouble(textBoxA.Text), Convert.ToDouble(textBoxB.Text), CalcOp.DIV).ToString();
+    //}
+
+    //Refactoring
+    //بهینه کردن ساختار کد بدون تغییر در رفتار
 
     private double Calc(double a, double b, string op)
     {
