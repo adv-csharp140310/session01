@@ -1,0 +1,12 @@
+﻿Source Control 
+	Benefits:
+		1. Track change
+		2. Back up
+		3. Coperation
+	Category:
+		1. Central - svn, cvn, .. SourceSafe
+		2. Distributed
+
+Git
+	commit
+	clone
